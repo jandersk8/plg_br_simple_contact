@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>BR Simple Contact Plugin</name>
+    <author>Janderson Moreira</author>
+    <creationDate>December 2025</creationDate>
+    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>jandersonmm@gmail.com</authorEmail>
+    <version>1.0.0</version>
+    <description>PLG_CONTENT_BR_SIMPLE_CONTACT_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="br_simple_contact">br_simple_contact.php</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                    name="recipient_email" 
+                    type="email" 
+                    label="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_RECIPIENT_LABEL"
+                    description="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_RECIPIENT_DESC"
+                    required="true"
+                    validate="email"
+                />
+
+                <field 
+                    name="email_subject" 
+                    type="text" 
+                    default="CONTATOS PELO SITE!"
+                    label="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUBJECT_LABEL"
+                    description="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUBJECT_DESC"
+                />
+
+                <field 
+                    name="success_message" 
+                    type="textarea" 
+                    default="Obrigado por entrar em contato! Responderemos o mais breve possível!"
+                    label="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUCCESS_MSG_LABEL"
+                    description="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUCCESS_MSG_DESC"
+                    rows="3"
+                    filter="raw"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
