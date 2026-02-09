@@ -14,6 +14,8 @@
         <server type="extension" priority="1" name="BR Simple Contact Updates">https://raw.githubusercontent.com/jandersk8/plg_br_simple_contact/main/update.xml</server>
     </updateservers>
 
+    <namespace path="src">Br\Plugin\Content\SimpleContact</namespace>
+
     <files>
         <filename plugin="br_simple_contact">br_simple_contact.php</filename>
         <folder>src</folder>
@@ -21,6 +23,15 @@
         <folder>language</folder>
         <file>LICENSE.txt</file>
     </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_br_simple_contact.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_content_br_simple_contact.sys.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.plg_content_br_simple_contact.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.plg_content_br_simple_contact.sys.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.plg_content_br_simple_contact.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.plg_content_br_simple_contact.sys.ini</language>
+    </languages>
 
     <config>
         <fields name="params">
