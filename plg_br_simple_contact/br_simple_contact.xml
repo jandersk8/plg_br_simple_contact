@@ -2,18 +2,24 @@
 <extension type="plugin" group="content" method="upgrade">
     <name>BR Simple Contact Plugin</name>
     <author>Janderson Moreira</author>
-    <creationDate>December 2025</creationDate>
-    <copyright>Copyright (c) 2025 Janderson Moreira. All rights reserved.</copyright>
+    <creationDate>February 2026</creationDate>
+    <copyright>Copyright (c) 2026 Janderson Moreira. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>jandersonmm@gmail.com</authorEmail>
-    <version>1.0.0</version>
+    <authorUrl>https://github.com/jandersk8</authorUrl>
+    <version>1.0.1</version>
     <description>PLG_CONTENT_BR_SIMPLE_CONTACT_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <server type="extension" priority="1" name="BR Simple Contact Updates">https://raw.githubusercontent.com/jandersk8/plg_br_simple_contact/main/update.xml</server>
+    </updateservers>
 
     <files>
         <filename plugin="br_simple_contact">br_simple_contact.php</filename>
         <folder>src</folder>
         <folder>tmpl</folder>
         <folder>language</folder>
+        <file>LICENSE.txt</file>
     </files>
 
     <config>
@@ -27,7 +33,6 @@
                     required="true"
                     validate="email"
                 />
-
                 <field 
                     name="email_subject" 
                     type="text" 
@@ -35,7 +40,6 @@
                     label="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUBJECT_LABEL"
                     description="PLG_CONTENT_BR_SIMPLE_CONTACT_FIELD_SUBJECT_DESC"
                 />
-
                 <field 
                     name="success_message" 
                     type="textarea" 
